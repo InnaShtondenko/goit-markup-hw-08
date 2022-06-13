@@ -1,0 +1,38 @@
+.client-section {
+    padding: 94px;
+}
+
+.client-section__clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -30px;
+}
+
+.client-section__client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid getColorFromPalette('icons', 'main');
+    border-radius: 4px;
+    fill: getColorFromPalette('icons', 'main');
+
+    transition: createTransitionFor('fill');
+
+    &:hover,
+    &:focus {
+        fill: getColorFromPalette('accent', 'light') ;
+        border: 1px solid getColorFromPalette('accent', 'light') ;
+    }
+}
+
+.client-section__client-itam {
+    flex-basis: calc((100% - 30px) / 6);
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+

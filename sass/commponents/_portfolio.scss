@@ -1,0 +1,19 @@
+.section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section-portfolio__filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.section-portfolio__filter {
+    margin-right: 8px;
+}
+
+.section-portfolio__filter:last-child {
+    margin-right: 0px;
+}

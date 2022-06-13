@@ -1,0 +1,33 @@
+$fontFamilies: (
+    'first': 'Roboto',
+    'second': 'raleway'
+);
+
+$fontFamilyFallback: sans-serif;
+
+$fontWeights: ('normal': 400,
+    'medium': 500,
+    'bold': 700,
+    'bolder': 900
+);
+
+$colorPalette: ('accent': ('dark': #000,
+        'additional': #188ce8,
+        'light': #2196f3,
+    ),
+    'background': ('light': #E5E5E5,
+        'dark': #2F303A,
+        'additional': #F5F4FA,
+    ),
+    'icons': ('main': #afb1b8,
+    ),
+
+    'primary': ('light': #FFFFFF,
+        'dark': #212121,
+        'additional': #757575,
+    ),
+);
+
+$transition: ('time': 250ms,
+    'timeFunction': cubic-bezier(0.4, 0, 0.2, 1),
+);

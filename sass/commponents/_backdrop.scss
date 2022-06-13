@@ -1,0 +1,237 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    z-index: 1;
+    transition: createTransitionFor('opacity');
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    & .backdrop__modal {
+        transform: translate(-50%, -50%) scale(0.1, 0.1);
+    }
+}
+
+.backdrop__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1, 1);
+    transition: createTransitionFor('visibility'), createTransitionFor('transform');
+
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+
+    background-color: getColorFromPalette('primary', 'light');
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+
+.backdrop__btn-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #0000001a;
+    border-radius: 50%;
+    background-color: inherit;
+    cursor: pointer;
+
+    transition: createTransitioinFor('color');
+
+    &:hover,
+    &:focus {
+        color: getColorFromPalette('accent', 'light');
+    }
+}
+
+.backdrop__btn-close-icone {
+
+    fill: currentColor;
+}
+
+.backdrop__modal-text {
+    font-weight: getFontWeight('bold');
+    font-size: 20px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+
+    color: getColorFromPalette('primary', 'dark');
+}
+
+.backdrop__textarea {
+    resize: none;
+}
+
+.backdrop__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.backdrop__form-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+
+    position: relative;
+}
+
+.backdrop__form-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+
+    letter-spacing: 0.01em;
+
+    color: getColorFromPalette('primary', 'additional');
+}
+
+.backdrop__input-text {
+    display: block;
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    border-color: #21212133;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    transition: createTransitionFor('border-color');
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+
+.backdrop__input-text--comment {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    border-color: #21212133;
+
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+
+.backdrop__form-icon {
+    position: absolute;
+    top: 40%;
+    left: 12px;
+
+    display: inline-block;
+    transition: createTransitionFor('fill');
+
+    .backdrop__input-text:focus~& {
+        fill: getColorFromPalette('accent', 'light');
+    }
+}
+
+.backdrop__form-agree {
+
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.backdrop__checkbox-hidden {
+    appearance: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.backdrop__check-icon {
+
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    border-radius: 2px;
+    border: 2px solid getColorFromPalette('primary', 'dark');
+    background-color: getColorFromPalette('primary', 'light');
+    fill: transparent;
+
+    transition: createTransitionFor('background-color'),
+    createTransitionFor('border-width'),createTransitionFor('fill');
+}
+
+.backdrop__form-agree .checkbox:focus+.check-icon,
+.backdrop__checkbox-hidden:checked+.backdrop__check-icon {
+    background-color: getColorFromPalette('accent', 'light');
+    border-width: 0;
+    fill: getColorFromPalette('primary', 'light');
+}
+
+.backdrop__check-agree {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+    color: getColorFromPalette('primary', 'additional');
+}
+
+.backdrop__policy-link {
+    color: getColorFromPalette('accent', 'light');
+}
+
+.backdrop__button {
+    width: 200px;
+    height: 50px;
+    background-color: getColorFromPalette('accent', 'light');
+    font-weight: getFontWeight('bold');
+    font-size: 16px;
+    line-height: 1.88;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: getColorFromPalette('primary', 'light');
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+    transition: createTransitionFor('background-color');
+
+    &:focus,
+    &:hover {
+        background-color: getColorFromPalette('accent', 'additional');
+    }
+}

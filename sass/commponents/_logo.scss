@@ -1,0 +1,28 @@
+.logo {
+    display: block;
+    font-family: getFontFamily('second');
+    font-weight: getFontWeight('bold');
+    color: getColorFromPalette('primary', 'dark');
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.logo__text-accent { 
+
+    font-family: getFontFamily('second');
+    font-style: normal;
+    font-weight: getFontWeight('bold');
+    font-size: 26px;
+    line-height: 31px;
+    color: getColorFromPalette('accent', 'light');
+}
+
+.logo__text-logo {
+    font-family: getFontFamily('second');
+    font-style: normal;
+    font-weight: getFontWeight('bold');
+    font-size: 26px;
+    line-height: 31px;
+}

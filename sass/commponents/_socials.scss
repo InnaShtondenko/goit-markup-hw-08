@@ -1,0 +1,47 @@
+.socials__social-list {
+    display: inline-flex;
+    align-items: center;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: -10px;
+
+}
+
+.socials__itam {
+    margin-right: 10px;
+
+}
+
+.socials__social-link,
+.footer__socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    fill: getColorFromPalette('icons', 'main');
+    border-radius: 50%;
+
+    transition: createTransitionFor('background-color'),
+    createTransitionFor('fill');
+
+
+    &:hover,
+    &:focus {
+        background-color: getColorFromPalette('accent', 'light');
+        fill: getColorFromPalette('primary', 'light');
+    }
+}
+
+.socials__social-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.footer__socials-link {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    fill: getColorFromPalette('primary', 'light');
+}
