@@ -1,6 +1,13 @@
 .section-title {
-    padding-top: 0;
-    padding-bottom: 94px;
+    // padding-top: 0;
+    // padding-bottom: 94px;
+    @include mq(not-desktop) {
+        display: none;
+    }
+    
+    @include mq(desktop) {
+        padding: 94px 0;
+    }
 }
 
 .section-title__subtitle,

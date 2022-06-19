@@ -38,6 +38,23 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
+    @include mq(mobile-only) {
+        padding: 94px 15px;
+    }
+    @media screen and (max-width:(480px - 0.02px)) {
+        max-width: calc(100%-30px);
+    }
+    
+    
+    
+    @include mq(not-desktop) {
+        width: 450px;
+    }
+    
+    @include mq(desktop) {
+        width: 528px;
+    }
+
 }
 
 .backdrop__btn-close {

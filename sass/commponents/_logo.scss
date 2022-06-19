@@ -3,10 +3,22 @@
     font-family: getFontFamily('second');
     font-weight: getFontWeight('bold');
     color: getColorFromPalette('primary', 'dark');
-    font-size: 26px;
+    font-size: 24px;
     line-height: 31px;
     letter-spacing: 0.03em;
     text-decoration: none;
+
+    @include mq(tablet-only) {
+        margin-right: 88px;
+    }
+    
+    @include mq(desktop) {
+        margin-right: 93px;
+    
+        font-size: 26px;
+        line-height: 1.19;
+    }
+
 }
 
 .logo__text-accent { 
@@ -14,7 +26,7 @@
     font-family: getFontFamily('second');
     font-style: normal;
     font-weight: getFontWeight('bold');
-    font-size: 26px;
+    font-size: 24px;
     line-height: 31px;
     color: getColorFromPalette('accent', 'light');
 }
@@ -23,6 +35,6 @@
     font-family: getFontFamily('second');
     font-style: normal;
     font-weight: getFontWeight('bold');
-    font-size: 26px;
+    font-size: 24px;
     line-height: 31px;
 }

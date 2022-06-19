@@ -1,24 +1,60 @@
 .features-section {
-    padding: 94px;
+    @include mq(not-desktop) {
+        padding: 60px 0;
+    }
+    
+    @include mq(desktop) {
+        padding: 94px 0;
+    }
+
 }
 
 .features-section__list {
-    display: flex;
+
+    @include mq(mobile-only){
+        display: block;
+    }
+    
+    @include mq(tablet-only){
+        display: -webkit-box;
+        flex-wrap: wrap;
+        
+        
+    }
+    @include mq(desktop){
+        display: flex;
+    }
 
     &::before {
         background-image: url(../images/icons/);
         content: '';
         width: 270px;
         height: 120px;
+        
     }
 }
 
 .features-section__item {
     flex-basis: calc(100% / 4);
+    
 
+    @include mq(tablet-only) {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+        
+
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+
+        &:nth-child(-n+2) {
+            margin-bottom: 30px;
+        }
+    }
+    
     &:not(:last-child) {
         margin-right: 30px;
     }
+    
 }
 
 .features-section__subtitle {
@@ -28,6 +64,10 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     color: getColorFromPalette('primary', 'dark');
+
+    @include mq(mobile-only){
+        text-align: center;
+    }
 }
 
 .features-section__icon-wrapper {
@@ -35,11 +75,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
-    height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;
     background-color: getColorFromPalette('background', 'additional');
+
+    @include mq(mobile-only){
+        width: 420px;
+        height: 120px;
+        
+        
+    }
+    @include mq(tablet-only){
+        width: 354px;
+        height: 120px;
+        
+    }
+    
+    @include mq(desktop){
+        width: 270px;
+        height: 120px;
+        
+    }
 }
 
 .features-section__text {
