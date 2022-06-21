@@ -1,20 +1,52 @@
 .client-section {
-    padding: 94px;
+    @include mq(not-desktop){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include mq(desktop){
+        padding: 94px;
+    }
 }
 
 .client-section__clients {
-    display: flex;
+
+    @include mq(mobile-only){
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @include mq(tablet-only) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @include mq(desktop) {
+        display: flex;
+        margin-right: -30px;
+    }
+   
     justify-content: center;
     align-items: center;
-    margin-right: -30px;
+    
 }
 
 .client-section__client-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
+    @include mq(mobile-only) {
+        width: 210px;
+        height: 92px;
+    }
+
+    @include mq(tablet-only) {
+        width: 226px;
+        height: 92px;
+    }
+
+    @include mq(desktop) {
+        width: 170px;
+        height: 92px;
+    }
     border: 1px solid getColorFromPalette('icons', 'main');
     border-radius: 4px;
     fill: getColorFromPalette('icons', 'main');
@@ -29,10 +61,25 @@
 }
 
 .client-section__client-itam {
-    flex-basis: calc((100% - 30px) / 6);
+    
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    @include mq(mobile-only) {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+    
+    @include mq(tablet-only) {
+        width: calc((100% - 6 * 15px) / 3);
+        margin: 15px;
+    
+    }
+    
+    @include mq(desktop) {
+        flex-basis: calc((100% - 30px) / 6);
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
     }
 }
 

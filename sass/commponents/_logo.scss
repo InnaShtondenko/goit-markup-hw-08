@@ -8,9 +8,9 @@
     letter-spacing: 0.03em;
     text-decoration: none;
 
-    @include mq(tablet-only) {
-        margin-right: 88px;
-    }
+    // @include mq(tablet-only) {
+    //     margin-right: 88px;
+    // }
     
     @include mq(desktop) {
         margin-right: 93px;

@@ -6,7 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    z-index: 1;
+    z-index: 100;
     transition: createTransitionFor('opacity');
 }
 
@@ -38,9 +38,10 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    @include mq(mobile-only) {
-        padding: 94px 15px;
-    }
+    // @include mq(mobile-only) {
+    //     padding: 94px 15px;
+
+    // }
     @media screen and (max-width:(480px - 0.02px)) {
         max-width: calc(100%-30px);
     }
@@ -130,7 +131,15 @@
 
 .backdrop__input-text {
     display: block;
-    width: 448px;
+
+    @include mq(not-desktop){
+        width: 370px;
+    }
+
+    @include mq(desktop){
+        width: 448px;
+    }
+    
     height: 40px;
     padding-left: 42px;
     border-color: #21212133;
@@ -216,10 +225,17 @@
 }
 
 .backdrop__check-agree {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    @include mq(not-desktop) {
+        font-size: 12px;
+        line-height: 14.06px;
+    }
 
+    @include mq(desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
+    font-weight: 400;
     letter-spacing: 0.03em;
     color: getColorFromPalette('primary', 'additional');
 }
