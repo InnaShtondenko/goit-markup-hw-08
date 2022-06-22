@@ -30,40 +30,73 @@
                 <a href="./index.html" class="page-header__logo logo" lang="en">
                     <span class="logo__text-accent">Web</span><span class="logo__text-logo">Studio</span>
                 </a>
-                <ul class="page-header__nav-link">
-                    <li class="page-header__itam">
-                        <a href="./index.html" class="page-header__itam-link">Студия</a>
-                    </li>
-                    <li class="page-header__itam">
-                        <a href="./portfolio.html" class="page-header__itam-link page-header__itam-link--text-accent">Портфолио</a>
-                    </li>
-                    <li class="page-header__itam">
-                        <a href="" class="page-header__itam-link">Контакты</a>
-                    </li>
-                </ul>
     
-                <ul class="page-header__contacts">
-                    <li class="page-header__contact">
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
     
-                        <a href="mailto:info@devstudio.com" class="page-header__contact-link">
-                            <svg class="page-header__contact-icon" width="16" height="12">
-                                <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
+                        <use class="icon-cross" href="./images/icons/decoration /close.svg#icon-close"></use>
+                        <use class="icon-menu" href="./images/icons/decoration /close.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <ul class="page-header__nav-link">
+                        <li class="page-header__itam">
+                            <a href="./index.html"
+                                class="page-header__itam-link">Студия</a>
+                        </li>
+                        <li class="page-header__itam">
+                            <a href="./portfolio.html" class="page-header__itam-link page-header__itam-link--text-accent">Портфолио</a>
+                        </li>
+                        <li class="page-header__itam">
+                            <a href="" class="page-header__itam-link">Контакты</a>
+                        </li>
+                    </ul>
     
-                    </li>
-                    <li class="page-header__contact">
+                    <ul class="page-header__contacts">
+                        <li class="page-header__contact">
     
-                        <a href="tel:+380961111111" class="page-header__contact-link">
-                            <svg class="page-header__contact-icon" width="10" height="16">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
+                            <a href="mailto:info@devstudio.com" class="page-header__contact-link mail">
+                                <svg class="page-header__contact-icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        <li class="page-header__contact">
     
-                    </li>
-                </ul>
+                            <a href="tel:+380961111111" class="page-header__contact-link tell">
+                                <svg class="page-header__contact-icon" width="10" height="16">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+    
+                        </li>
+                    </ul>
+                    <ul class="menu_socials">
+                        <li class="menu_socials-item">
+                            <a class="menu_socials-link" href="./">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="menu_socials-item">
+                            <a class="menu_socials-link" href="./">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="menu_socials-item">
+                            <a class="menu_socials-link" href="./">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="menu_socials-item">
+                            <a class="menu_socials-link" href="./">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -90,7 +123,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-8.jpg" alt="компьютер-фото-команды" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img_s.jpg 450w,
+                                    ./images/retina/portfolio/img_s@2x.jpg 900w,
+                                    ./images/retina/portfolio/img_m.jpg 354w,
+                                    ./images/retina/portfolio/img_m@2x.jpg 708w,
+                                    ./images/retina/portfolio/img_l.jpg 370w, 
+                                    ./images/retina/portfolio/img_l@2x.jpg 740w" 
+                        src="./images/retina/portfolio/img_s.jpg"
+                            alt="компьютер-фото-команды" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                         <div class="section-portfolio__card-link-overlay">
                             <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
@@ -105,7 +149,20 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-9.jpg" alt="постер-с-баскетболистами" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-1_s.jpg 450w,
+                                ./images/retina/portfolio/img-1_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-1_m.jpg 354w,
+                                ./images/retina/portfolio/img-1_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-1_l.jpg 370w, 
+                                ./images/retina/portfolio/img-1_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-1_s.jpg"
+
+                            alt="постер-с-баскетболистами" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
+
                             <div class="section-portfolio__card-link-overlay">
                                 <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -120,7 +177,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-16.jpg" alt="логотип-на-фоне-рыбы" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-2_s.jpg 450w,
+                                ./images/retina/portfolio/img-2_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-2_m.jpg 354w,
+                                ./images/retina/portfolio/img-2_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-2_l.jpg 370w, 
+                                ./images/retina/portfolio/img-2_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-2_s.jpg" 
+                            alt="логотип-на-фоне-рыбы" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                             <div class="section-portfolio__card-link-overlay">
                                 <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -135,7 +203,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-10.jpg" alt="наушники-на-белом-фоне" width="370">
+                            <img class="section-portfolio__card-img" 
+                            ssrcset="./images/retina/portfolio/img-3_s.jpg 450w,
+                                ./images/retina/portfolio/img-3_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-3_m.jpg 354w,
+                                ./images/retina/portfolio/img-3_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-3_l.jpg 370w, 
+                                ./images/retina/portfolio/img-3_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-3_s.jpg" 
+                            alt="наушники-на-белом-фоне" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                         <div class="section-portfolio__card-link-overlay">
                             <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
@@ -150,7 +229,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-11.jpg" alt="белая-и-коричневая-коробки" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-4_s.jpg 450w,
+                                ./images/retina/portfolio/img-4_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-4_m.jpg 354w,
+                                ./images/retina/portfolio/img-4_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-4_l.jpg 370w, 
+                                ./images/retina/portfolio/img-4_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-4_s.jpg"  
+                            alt="белая-и-коричневая-коробки" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                         <div class="section-portfolio__card-link-overlay">
                             <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
@@ -165,7 +255,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-12.jpg" alt="монитор-с-картой-мира" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-5_s.jpg 450w,
+                                ./images/retina/portfolio/img-5_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-5_m.jpg 354w,
+                                ./images/retina/portfolio/img-5_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-5_l.jpg 370w, 
+                                ./images/retina/portfolio/img-5_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-5_s.jpg"   
+                            alt="монитор-с-картой-мира" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                         <div class="section-portfolio__card-link-overlay">
                             <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
@@ -180,7 +281,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-13.jpg" alt="раскрытый-журнал" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-6_s.jpg 450w,
+                                ./images/retina/portfolio/img-6_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-6_m.jpg 354w,
+                                ./images/retina/portfolio/img-6_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-6_l.jpg 370w, 
+                                ./images/retina/portfolio/img-6_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-6_s.jpg"   
+                            alt="раскрытый-журнал" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                         <div class="section-portfolio__card-link-overlay">
                             <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
@@ -195,8 +307,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-14.jpg" alt="белая-бирка-с-черными-буквами-и-коричневой-веревкой"
-                                width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-7_s.jpg 450w,
+                                ./images/retina/portfolio/img-7_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-7_m.jpg 354w,
+                                ./images/retina/portfolio/img-7_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-7_l.jpg 370w, 
+                                ./images/retina/portfolio/img-7_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-7_s.jpg"  
+                            alt="белая-бирка-с-черными-буквами-и-коричневой-веревкой"
+                            width="370"
+                            height="294"
+                            loading="lazy">
                             <div class="section-portfolio__card-link-overlay">
                                 <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -212,7 +334,18 @@
                     <li class="section-portfolio__card">
                         <a class="section-portfolio__card-link" href="./">
                             <div class="section-portfolio__img-wrapper">
-                            <img class="section-portfolio__card-img" src="./images/img-15.jpg" alt="ноутбук-с-бизнес-идеей" width="370">
+                            <img class="section-portfolio__card-img" 
+                            srcset="./images/retina/portfolio/img-8_s.jpg 450w,
+                                ./images/retina/portfolio/img-8_s@2x.jpg 900w,
+                                ./images/retina/portfolio/img-8_m.jpg 354w,
+                                ./images/retina/portfolio/img-8_m@2x.jpg 708w,
+                                ./images/retina/portfolio/img-8_l.jpg 370w, 
+                                ./images/retina/portfolio/img-8_l@2x.jpg 740w" 
+                            src="./images/retina/portfolio/img-8_s.jpg"  
+                            alt="ноутбук-с-бизнес-идеей" 
+                            width="370"
+                            height="294"
+                            loading="lazy">
                         <div class="section-portfolio__card-link-overlay">
                             <p class="section-portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
@@ -232,82 +365,83 @@
 <footer class="footer">
 
     <div class="footer_container container">
-        <div class="footer__info">
-            <a href="./index.html" class="footer__logo logo" lang="en">
-                <span class="logo__text-accent">Web</span><span class="logo__clear-link-text-accent">Studio</span>
-            </a>
-            <address class="footer-adresses">
-                <ul class="footer-adresses__contacts">
-                    <li class="footer__adress-item">
-                        <a class="footer__adress-link  footer__adress-link--text-accent" href="https://bit.ly/3pXMvUd"
-                            target="_blank" rel="noopener noreferrer">г.
-                            Киев, пр-т
-                            Леси Украинки, 26</a>
+        <div class="footer__main">
+            <div class="footer__info">
+                <a href="./index.html" class="footer__logo logo" lang="en">
+                    <span class="logo__text-accent">Web</span><span class="logo__clear-link-text-accent">Studio</span>
+                </a>
+                <address class="footer-adresses">
+                    <ul class="footer-adresses__contacts">
+                        <li class="footer__adress-item">
+                            <a class="footer__adress-link  footer__adress-link--text-accent"
+                                href="https://bit.ly/3pXMvUd" target="_blank" rel="noopener noreferrer">г.
+                                Киев, пр-т
+                                Леси Украинки, 26</a>
+                        </li>
+                        <li class="footer__adress-item">
+                            <a class="footer__adress-link" href="mailto:info@devstudio.com">info@example.com</a>
+                        </li>
+                        <li class="footer__adress-item">
+                            <a class="footer__adress-link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="footer__follow-us">
+                <h2 class="footer__follow-us-subtitle">ПРИСОЕДИНЯЙТЕСЬ</h2>
+                <ul class="socials__social-list">
+                    <li class="socials__itam">
+                        <a href="https://www.instagram.com" class="footer__socials-link socials__link" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="socials__social-icon">
+                                <use href="./images/icons.svg#icon-instagramgray"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="footer__adress-item">
-                        <a class="footer__adress-link" href="mailto:info@devstudio.com">info@example.com</a>
+                    <li class="socials__itam">
+                        <a href="https://twitter.com" class="footer__socials-link socials__link" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="socials__social-icon">
+                                <use href="./images/icons.svg#icon-twittergray">
+                                </use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="footer__adress-item">
-                        <a class="footer__adress-link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <li class="socials__itam">
+                        <a href="https://www.facebook.com" class="footer__socials-link socials__link" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="socials__social-icon">
+                                <use href="./images/icons.svg#icon-facebookgray"></use>
+                            </svg>
+                        </a>
                     </li>
+                    <li class="socials__itam">
+                        <a href="https://www.linkedin.com" class="footer__socials-link socials__link" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="socials__social-icon">
+                                <use href="./images/icons.svg#icon-linkedingray"></use>
+                            </svg>
+                        </a>
+                    </li>
+
                 </ul>
-            </address>
-        </div>
-        <div class="footer__follow-us">
-            <h2 class="footer__follow-us-subtitle">ПРИСОЕДИНЯЙТЕСЬ</h2>
-            <ul class="socials__social-list">
-                <li class="socials__itam">
-                    <a href="https://www.instagram.com" class="footer__socials-link socials__link" target="_blank"
-                        rel="noopener noreferrer">
-                        <svg class="socials__social-icon">
-                            <use href="./images/icons.svg#icon-instagramgray"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__itam">
-                    <a href="https://twitter.com" class="footer__socials-link socials__link" target="_blank"
-                        rel="noopener noreferrer">
-                        <svg class="socials__social-icon">
-                            <use href="./images/icons.svg#icon-twittergray">
-                            </use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__itam">
-                    <a href="https://www.facebook.com" class="footer__socials-link socials__link" target="_blank"
-                        rel="noopener noreferrer">
-                        <svg class="socials__social-icon">
-                            <use href="./images/icons.svg#icon-facebookgray"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__itam">
-                    <a href="https://www.linkedin.com" class="footer__socials-link socials__link" target="_blank"
-                        rel="noopener noreferrer">
-                        <svg class="socials__social-icon">
-                            <use href="./images/icons.svg#icon-linkedingray"></use>
-                        </svg>
-                    </a>
-                </li>
 
-            </ul>
-
+            </div>
         </div>
 
         <form class="footer__email">
             <h2 class="footer__subtitle-subscribe">Подпишитесь на рассылку</h2>
-
-            <input class="footer__email-input" type="email" name="email" id="user-email" placeholder="E-mail"
-                required />
-
-            <button class="footer__button-form" type="submit">Подписаться
-                <svg class="footer__button-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-send">
-                    </use>
-                </svg>
-            </button>
+            <div class="footer__form">
+                <input class="footer__email-input" type="email" name="email" id="user-email" placeholder="E-mail"
+                    required />
+                <button class="footer__button-form" type="submit">Подписаться
+                    <svg class="footer__button-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-send">
+                        </use>
+                    </svg>
+                </button>
+            </div>
         </form>
-
     </div>
 </footer>
 <script src="./jc/modal.js"></script>

@@ -1,19 +1,44 @@
 .section-portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @include mq(not-desktop){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    @include mq(desktop){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .section-portfolio__filters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    @include mq(mobile-only){
+        margin-bottom: 40px;
+    }
+
+    @include mq(tablet-only){
+        margin-bottom: 30px;
+    }
+
+    @include mq(tablet){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    
 }
 
 .section-portfolio__filter {
+    display: inline-block;
     margin-right: 8px;
 }
 
 .section-portfolio__filter:last-child {
     margin-right: 0px;
+}
+
+.section-portfolio__filter:nth-child(n+4) {
+    @include mq(mobile-only){
+        margin-top: 15px;
+    }
 }

@@ -11,6 +11,18 @@
     margin-right: 30px;
     margin-top: 30px;
 
+    @include mq(mobile-only){
+        width: 450px;
+    }
+
+    @include mq(tablet-only){
+        width: calc((100% - 4 * 15px) / 2);
+    }
+
+    @include mq(desctop){
+        width: calc((100% - 3 * 30px) / 3);
+
+    }
 }
 
 .section-portfolio__card-link {
@@ -34,6 +46,18 @@
 .section-portfolio__img-wrapper {
     position: relative;
     overflow: hidden;
+}
+
+.section-portfolio__card-img {
+    @include mq(mobile-only){
+        width: 450px;
+    }
+
+    @include mq(tablet-only){
+        width: 354px;
+    }
+
+    
 }
 
 
