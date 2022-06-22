@@ -38,8 +38,6 @@
 }
 
 .features-section__item {
-    
-    
 
     @include mq(tablet-only) {
             width: calc((100% - 4 * 15px) / 2);
@@ -67,6 +65,11 @@
     
     
 }
+.features-section__item:not(:last-child) {
+    @include mq(mobile-only) {
+        margin-bottom: 30px;
+    }
+}
 
 .features-section__subtitle {
     font-weight: getFontWeight('bold');
@@ -91,7 +94,7 @@
     background-color: getColorFromPalette('background', 'additional');
 
     @include mq(mobile-only){
-        width: 420px;
+        // width: 420px;
         height: 120px;
         
         

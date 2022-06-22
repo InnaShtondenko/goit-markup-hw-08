@@ -10,6 +10,12 @@
 
     
 }
+.team-section__title {
+    @include mq(not-desktop){
+    margin-bottom: 30px;
+ }
+}
+
 
 .team-section__img {
     
@@ -32,8 +38,15 @@
 }
 
 .team-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @include mq(not-desktop){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include mq(desktop){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
     background-color: getColorFromPalette('background', 'additional');
 }
 
@@ -66,8 +79,8 @@
     }
     
     @include mq(desktop) {
-        width: 270px;
-        height: 428px;
+        // width: 270px;
+        // height: 428px;
         &:not(:last-child) {
             margin-right: 30px;
         }
@@ -91,7 +104,10 @@
 
     }
     @include mq(desktop) {
-        padding: 30px 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
     margin: 0;
 

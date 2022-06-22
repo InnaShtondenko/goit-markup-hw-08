@@ -16,16 +16,18 @@
     }
 
     @include mq(tablet-only){
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 30px;
     }
-
-    @include mq(tablet){
+    
+    @include mq(desktop){
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 50px;
     }
-    
 }
 
 .section-portfolio__filter {

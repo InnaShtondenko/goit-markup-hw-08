@@ -9,15 +9,21 @@
     }
 }
 
+.client-section__title{
+    @include mq(not-desktop){
+        font-size: 28px;
+        line-height: 1.18;
+        margin-bottom: 30px;
+    }
+}
+
 .client-section__clients {
 
-    @include mq(mobile-only){
+   
+    @include mq(not-desktop) {
         display: flex;
         flex-wrap: wrap;
-    }
-    @include mq(tablet-only) {
-        display: flex;
-        flex-wrap: wrap;
+        margin: -15px;
     }
     @include mq(desktop) {
         display: flex;
